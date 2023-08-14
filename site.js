@@ -53,7 +53,7 @@ tl2.from(".building", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
 tl2.from(".logos", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
 
 let button = document.getElementById('tab').addEventListener('click', () => {
-    window.location.href = 'C:/Users/canman/Desktop/fullpageJS/project.html';
+    window.location.href = 'C:/Users/canman/Documents/Portfolio/project.html';
 });
 
 var btn = document.querySelector('#redirect');
