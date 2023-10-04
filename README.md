@@ -1,2 +1,2 @@
 # Portfolio
-My personal portfolio website can be viewed here: https://www.canyonc.dev. 
+The portfolio website can be viewed here: https://www.canyonc.dev. 
