@@ -1,7 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     var border = document.querySelector('.cards1');
     var under = document.querySelector('.dynamic');
+    var under2 = document.querySelector('.dynamic1');
+    var border2 = document.querySelector('.cards');
 
+    border2.addEventListener('mouseover', function () {
+        under2.classList.add('underline');
+    })
+
+    border2.addEventListener('mouseout', function () {
+        under2.classList.remove('underline')
+    })
 
     border.addEventListener('mouseover', function () {
         under.classList.add('underline');
@@ -12,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 var trans = document.querySelector('.cards1');
+
+
 4
 trans.addEventListener('mouseout', function () {
     trans.classList.add('off');
@@ -26,34 +37,38 @@ let tl = gsap.timeline({
 });
 
 
-tl.from("#under", { x: 200, opacity: 0, duration: 1.4 })
+tl.from("#under", { y: -200, opacity: 0, duration: 1.4 })
 
-tl.from(".cards1", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl.from(".cards1", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
-tl.from(".cards", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl.from(".cards", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
-tl.from(".cards2", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl.from(".cards2", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
 let tl2 = gsap.timeline({
     scrollTrigger: {
-        trigger: '.viewport3',
+        trigger: '.shifttt',
         start: "center bottom"
 
     }
 })
 
-tl2.from(".fredd", { x: 200, opacity: 0, duration: 1.4 })
+tl2.from(".fredd", { y: -200, opacity: 0, duration: 1.4 })
 
-tl2.from(".shifttt", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl2.from(".shifttt", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
-tl2.from(".working", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl2.from(".working", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
-tl2.from(".building", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl2.from(".building", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
-tl2.from(".logos", { x: 200, opacity: 0, duration: 1.1 }, "-=1")
+tl2.from(".logos", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
 let button = document.getElementById('tab').addEventListener('click', () => {
-    window.location.href = 'C:/Users/canman/Documents/Portfolio/project.html';
+    window.location.href = 'https://canyonc.dev/project.html';
+});
+
+let UCSD = document.getElementById('git').addEventListener('click', () => {
+    window.open('https://github.com/ECE-196/ECE-196-Site', '_blank');
 });
 
 var btn = document.querySelector('#redirect');

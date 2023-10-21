@@ -21,8 +21,7 @@ body {
 }
 
 .viewport1 {
-    height: 100vh;
-
+    min-height: 100vh;
 }
 
 .top {
@@ -33,14 +32,12 @@ body {
     padding-top: .5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* border: 1px solid green; */
 }
 
 .socials {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    /* border: 1px solid red; */
     padding: 0;
 }
 
@@ -101,7 +98,8 @@ svg:not(:hover) .p1 {
 
 .personal {
     margin-top: 20rem;
-    margin-left: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
     text-align: center;
 }
 
@@ -111,7 +109,6 @@ p {
     font-weight: 400;
     font-size: 3rem;
     text-align: center;
-    /* border: 1px solid red; */
 }
 
 h1 {
@@ -142,7 +139,6 @@ h1 {
     display: none;
     justify-content: center;
     margin-top: 20%;
-    /* border: 1px solid red; */
 }
 
 @keyframes alter {
@@ -168,6 +164,10 @@ h1 {
     .media {
         display: flex;
     }
+
+    .personal {
+        margin-top: 15rem;
+    }
 }
 
 @media (width <=850px) or (height <=709px) {
@@ -182,9 +182,8 @@ h1 {
 /* Project Section*/
 
 .viewport2 {
-    /* border: 1px solid green; */
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -192,7 +191,6 @@ h1 {
 .layout {
 
     border: 1px solid yellow;
-    /* gap: 5rem; */
 }
 
 h2 {
@@ -213,7 +211,8 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    /* border: 1px solid yellow; */
+    gap: 4em;
+    margin-bottom: 3rem;
     height: 100%;
 }
 
@@ -221,6 +220,13 @@ h2 {
     width: 70%;
     border: 3px solid black;
     border-radius: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.cards:hover {
+    cursor: pointer;
+    animation: grow 0.3s linear 0s 1 forwards;
 }
 
 .cards2 {
@@ -239,13 +245,23 @@ h2 {
 
 .cards1:hover {
     cursor: pointer;
-    border: 10px solid black;
-    transition: .3s;
+    animation: grow 0.3s linear 0s 1 forwards;
+}
+
+@keyframes grow {
+    100% {
+        border: 10px solid black;
+    }
 }
 
 .off {
-    border: 3px solid black;
-    transition: 0.3s;
+    animation: shrink 0.3s linear 0s 1 forwards;
+}
+
+@keyframes shrink {
+    100% {
+        border: 3px solid black;
+    }
 }
 
 .dynamic {
@@ -255,8 +271,6 @@ h2 {
     font-size: 3rem;
     text-align: center;
     position: relative;
-    /* border: 1px solid red; */
-
 }
 
 .dynamic1 {
@@ -266,7 +280,6 @@ h2 {
     font-size: 3rem;
     text-align: center;
     position: relative;
-    /* border: 1px solid red; */
 
 }
 
@@ -277,7 +290,6 @@ h2 {
     font-size: 3rem;
     text-align: center;
     position: relative;
-    /* border: 1px solid red; */
 
 }
 
@@ -304,10 +316,7 @@ h2 {
 }
 
 .viewport3 {
-    /* background-color: black; */
-    max-height: 100vh;
-    /* background-image: url('C:/Users/canman/Desktop/fullpageJS/Hi.jpg');
-    background-size: contain; */
+    min-height: 100vh;
 
 }
 
@@ -326,24 +335,13 @@ h2 {
 }
 
 .img {
-    /* border: 1px solid red; */
+    min-height: 100vh;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
-
-}
-
-.fredd {
-    max-height: 100vh;
-    min-width: 40%;
-    /* border: 1px solid pink; */
 }
 
 .textt {
-    /* padding-left: 5rem; */
-    /* border: 1px solid green; */
-    /* margin-left: 4rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,15 +349,12 @@ h2 {
     width: fit-content;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* border: 1px solid purple; */
-    /* margin-left: 7rem; */
 }
 
 
 .working {
     padding-left: 1rem;
     text-align: center;
-    /* border: 1px solid yellow; */
     width: 100%;
     font-size: 3rem;
 }
@@ -370,7 +365,6 @@ h2 {
     font-weight: 400;
     font-size: 5rem;
     line-height: 2rem;
-    /* border: 1px solid red; */
 }
 
 .building {
@@ -393,29 +387,27 @@ h2 {
     font-weight: 400;
     font-size: 3rem;
     line-height: 2rem;
-    /* border: 1px solid red; */
-}
-
-@media (width <=1117px) {
-    .working {
-        font-size: 2rem;
-    }
 }
 
 @media (width <=921px) {
-    .fredd {
-        display: none;
-    }
 
     .red {
         font-size: 3rem;
     }
 
     .working {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .red2 {
         font-size: 2rem;
     }
+}
+
+.coming2 {
+    color: red;
+}
+
+.coming {
+    color: black;
 }
