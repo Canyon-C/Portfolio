@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var under = document.querySelector('.dynamic');
     var under2 = document.querySelector('.dynamic1');
     var border2 = document.querySelector('.cards');
+    var border3 = document.querySelector('.cards2');
+    var under3 = document.querySelector('.dynamic2');
 
     border2.addEventListener('mouseover', function () {
         under2.classList.add('underline');
@@ -10,6 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     border2.addEventListener('mouseout', function () {
         under2.classList.remove('underline')
+    })
+    
+    border3.addEventListener('mouseover', function () {
+        under3.classList.add('underline');
+    })
+
+    border3.addEventListener('mouseout', function () {
+        under3.classList.remove('underline')
     })
 
     border.addEventListener('mouseover', function () {
@@ -45,6 +55,8 @@ tl.from(".cards", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
 tl.from(".cards2", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
 
+tl.from(".cards3", { y: -200, opacity: 0, duration: 1.1 }, "-=1")
+
 let tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: '.shifttt',
@@ -68,7 +80,11 @@ let button = document.getElementById('tab').addEventListener('click', () => {
 });
 
 let UCSD = document.getElementById('git').addEventListener('click', () => {
-    window.open('https://github.com/ECE-196/ECE-196-Site', '_blank');
+    window.open('https://github.com/Canyon-C/visualizer', '_blank');
+});
+
+let python = document.getElementById('git2').addEventListener('click', () => {
+    window.open('https://github.com/Canyon-C/daq-GUI', '_blank');
 });
 
 var btn = document.querySelector('#redirect');
