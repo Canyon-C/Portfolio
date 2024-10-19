@@ -77,7 +77,7 @@ let button = document.getElementById("tab").addEventListener("click", () => {
 });
 
 let UCSD = document.getElementById("git").addEventListener("click", () => {
-  window.open("https://github.com/Canyon-C/visualizer", "_blank");
+  window.open("https://2576a8e9.visualizer-4i4.pages.dev/", "_blank");
 });
 
 let python = document.getElementById("git2").addEventListener("click", () => {
